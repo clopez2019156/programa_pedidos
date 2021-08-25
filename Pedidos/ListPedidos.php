@@ -86,6 +86,10 @@ include("../includes/header.php");
               echo "<a href = 'javascript:fun_view(" . $fila["idPedidoUnhesa"] . ");'>";
               echo "<i class=\"fas fa-search\"></i>";
               echo "</td>";
+              echo "<td align = 'center'>";
+              echo "<a href = 'javascript:fun_view2(" . $fila["idPedidoUnhesa"] . ");'>";
+              echo "<i class=\"fas fa-sync-alt\"></i>";
+              echo "</td>";
               echo "</tr>";
             }
             ?>
@@ -112,6 +116,18 @@ include("../includes/header.php");
   function fun_view(pid) {
     document.fview.idPedido.value = pid;
     document.fview.submit();
+  }
+</script>
+
+<!-- Repetir pedido -->
+<form name='fview2' method='post' action='zvista_gabriel.php'>
+  <input type="hidden" name="idPedido2">
+</form>
+
+<script language="javascript">
+  function fun_view2(pid) {
+    document.fview2.idPedido2.value = pid;
+    document.fview2.submit();
   }
 </script>
 
