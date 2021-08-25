@@ -171,7 +171,7 @@ while ($fila = mysqli_fetch_array($resultadoUsuario)) {
       <script src="../js/pedido.js"></script>
       <!-- Termina Formulario  -->
       <!-- End of Main Content -->
-
+                   <!--  Hola -->
       <?PHP
       include("../includes/footer.php");
       include("../bd/fin_conexion.php");
