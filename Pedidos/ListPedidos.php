@@ -40,6 +40,7 @@ include("../includes/header.php");
               <th>Total(Q)</th>
               <th>Estado</th>
               <th>Detalles</th>
+              <th>Repetir</th>
             </tr>
           </thead>
           <tfoot>
@@ -52,6 +53,7 @@ include("../includes/header.php");
               <th>Total(Q)</th>
               <th>Estado</th>
               <th>Detalles</th>
+              <th>Repetir</th>
             </tr>
           </tfoot>
           <tbody>
@@ -74,24 +76,45 @@ include("../includes/header.php");
             $resultado = mysqli_query($con, $sql);
             // echo $sql;
             while ($fila = mysqli_fetch_array($resultado)) {
-              echo "<tr>";
-              echo "<td>" . $fila["idPedidoUnhesa"] . "</td>";
-              echo "<td>" . $fila["fecha_emision"] . "</td>";
-              echo "<td>" . $fila["cliente"] . "</td>";
-              echo "<td>" . $fila["vendedor"] . "</td>";
-              echo "<td>" . $fila["tipoentrega"] . "</td>";
-              echo "<td>" . $fila["total"] . "</td>";
-              echo "<td>" . $fila["estado"] . "</td>";
-              echo "<td align = 'center'>";
-              echo "<a href = 'javascript:fun_view(" . $fila["idPedidoUnhesa"] . ");'>";
-              echo "<i class=\"fas fa-search\"></i>";
-              echo "</td>";
-              echo "<td align = 'center'>";
-              echo "<a href = 'javascript:fun_view2(" . $fila["idPedidoUnhesa"] . ");'>";
-              echo "<i class=\"fas fa-sync-alt\"></i>";
-              echo "</td>";
-              echo "</tr>";
-            }
+              if ( $fila["estado"] != "Confirmado"){
+                echo "<tr>";
+                echo "<td>" . $fila["idPedidoUnhesa"] . "</td>";
+                echo "<td>" . $fila["fecha_emision"] . "</td>";
+                echo "<td>" . $fila["cliente"] . "</td>";
+                echo "<td>" . $fila["vendedor"] . "</td>";
+                echo "<td>" . $fila["tipoentrega"] . "</td>";
+                echo "<td>" . $fila["total"] . "</td>";
+                echo "<td>" . $fila["estado"] . "</td>";
+                echo "<td align = 'center'>";
+                echo "<a href = 'javascript:fun_view(" . $fila["idPedidoUnhesa"] . ");'>";
+                echo "<i class=\"fas fa-search\"></i>";
+                echo "</td>";
+                echo "<td align = 'center'>";
+                echo "<a href = 'javascript:fun_view3(" . $fila["idPedidoUnhesa"] . ");'>";
+                echo "<i class=\"fas fa-ban\"></i>";
+                echo "</td>";
+                echo "</tr>";
+                
+              }else{
+                echo "<tr>";
+                echo "<td>" . $fila["idPedidoUnhesa"] . "</td>";
+                echo "<td>" . $fila["fecha_emision"] . "</td>";
+                echo "<td>" . $fila["cliente"] . "</td>";
+                echo "<td>" . $fila["vendedor"] . "</td>";
+                echo "<td>" . $fila["tipoentrega"] . "</td>";
+                echo "<td>" . $fila["total"] . "</td>";
+                echo "<td>" . $fila["estado"] . "</td>";
+                echo "<td align = 'center'>";
+                echo "<a href = 'javascript:fun_view(" . $fila["idPedidoUnhesa"] . ");'>";
+                echo "<i class=\"fas fa-search\"></i>";
+                echo "</td>";
+                echo "<td align = 'center'>";
+                echo "<a href = 'javascript:fun_view2(" . $fila["idPedidoUnhesa"] . ");'>";
+                echo "<i class=\"fas fa-sync-alt\"></i>";
+                echo "</td>";
+                echo "</tr>";
+              }
+          }        
             ?>
           </tbody>
         </table>
@@ -128,6 +151,23 @@ include("../includes/header.php");
   function fun_view2(pid) {
     document.fview2.idPedido2.value = pid;
     document.fview2.submit();
+  }
+</script>
+
+<!-- Error Repetir pedido -->
+<form name='fview3' method='post'>
+  <input type="hidden" name="idPedido3">
+</form>
+
+<script language="javascript">
+  function fun_view3(pid) {
+    document.fview3.idPedido3.value = pid;
+    Swal.fire(
+                'Fallo al repetir',
+                'El estado del pedido no permite que se repita',
+                'error'
+          );
+    document.fun_view3.submit();
   }
 </script>
 
