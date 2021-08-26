@@ -48,12 +48,14 @@ $id = $_SESSION["idUsuario"];
             <!-- Nested Row within Card Body -->
             <div class="row" style="width: 100%" align="center">
                 <div class="col-lg">
+
                     <div class="p-5">
                         <div class="text-left">
                             <h1 class="h5 text-gray-900 mb-4 text-center">Por favor llene el siguiente formulario:</h1>
                         </div>
                         <form>
                             <div class="col-sm-10">
+
                                 <h2 class="h6 text-gray-700 mb-4" align="left">Datos del cliente:</h2>
                                 <input type="hidden" id="idCliente" value="<?= $_POST["idCliente"]; ?>">
                                 <input type="hidden" id="idVendedor" value="<?= $id ?>">
@@ -92,6 +94,41 @@ $id = $_SESSION["idUsuario"];
                                 <input type="text" class="form-control form-control-user" id="observaciones" name="observaciones" placeholder="Observaciones">
                                 <br>
 
+                                <div>
+                                <div class="p-5" style="overflow-x:auto;">
+                            </div>
+
+                            <table class="table table-striped table-bordered nowrap" id="dataTable" width="100%" align="center" cellspacing="0" data-role="datatable" data-info="false">
+                                <thead>
+                                    <tr>
+                                        <th>Código del Producto</th>
+                                        <th>Nombre del producto</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio</th>
+                                        <th>Total</th>
+                                        <th>Observaciones</th>
+                                        <th>Opciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td value="752">PTPPFR001</td>
+                                    <td>Fri-Oso Fardo Uva 150 Barras</td>
+                                    <td><input type="number" placeholder="0"></td>
+                                    <td>Q67.50</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><i class="fas fa-trash-alt"></i></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <br>
+
+                        </form>
+                    </div>
+
+                                </div>
+                                    <br>
                                 <hr>
                                 <h2 class="h6 text-gray-700 mb-4" align="left">Detalle del pedido:</h2>
                                 <label>Codigo del producto:</label>
