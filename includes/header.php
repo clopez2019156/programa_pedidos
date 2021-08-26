@@ -89,6 +89,7 @@ if (!isset($_SESSION["nombreUsuario"]) || !isset($_SESSION["idEmpresaUsuario"]) 
         echo '<h6 class="collapse-header">Opciones:</h6>';
         echo '<a class="collapse-item" href="/programa_pedidos/Pedidos/Pedido_busqueda.php"> <i class="fas fa-stream"></i>&nbsp Buscar</a>';
         echo '<a class="collapse-item" href="/programa_pedidos/Pedidos/AddCliente.php"> <i class="fas fa-plus"></i>&nbsp Agregar</a>';
+        echo '<a class="collapse-item" href="/programa_pedidos/Pedidos/AddClienteFriosos.php"> <i class="fas fa-plus"></i>&nbsp Plantilla Friosos</a>';
         echo '</div>';
         echo '</div>';
         echo '</li>';
@@ -103,6 +104,7 @@ if (!isset($_SESSION["nombreUsuario"]) || !isset($_SESSION["idEmpresaUsuario"]) 
         echo '<h6 class="collapse-header">Opciones:</h6>';
         echo '<a class="collapse-item" href="/programa_pedidos/Pedidos_Proquima/Pedido_busqueda.php"> <i class="fas fa-stream"></i>&nbsp Buscar</a>';
         echo '<a class="collapse-item" href="/programa_pedidos/Pedidos_Proquima/AddCliente.php"> <i class="fas fa-plus"></i>&nbsp Agregar</a>';
+        echo '<a class="collapse-item" href="/programa_pedidos/Pedidos/AddClienteFriosos.php"> <i class="fas fa-plus"></i>&nbsp Plantilla Friosos</a>';
         echo '</div>';
         echo '</div>';
         echo '</li>';

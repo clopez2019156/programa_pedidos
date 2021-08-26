@@ -10,14 +10,14 @@ $user = 'sa';
 $password = 'grueconsa';
 // Connect to the data source and get a handle for that connection.
 
-$conn = odbc_connect($dsn, $user, $password);
+/*$conn = odbc_connect($dsn, $user, $password);
 if (!$conn) {
     if (phpversion() < '4.0') {
         exit("Connection Failed: . $php_errormsg");
     } else {
         exit("Connection Failed:" . odbc_errormsg());
     }
-}
+}*/
 // ---------------- MYSQL -------------------- //
 $con = mysqli_connect("localhost", "root", "");
 if (!$con) {
@@ -401,7 +401,7 @@ if (isset($_POST)) {
                 echo 'success';
             }
         }
-        header("Location: ../Pedidos/ListPedidos.php?variable=1");
+        header("Location: ../../Pedidos/ListPedidos.php?variable=1");
     }
     if (isset($_POST["guardar_foto"])) {
         $check = getimagesize($_FILES["image"]["tmp_name"]);
