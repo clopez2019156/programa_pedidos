@@ -97,247 +97,252 @@ $id = $_SESSION["idUsuario"];
                                     <div>
                                     <div class="p-5" style="overflow-x:auto;">
                                 </div>
-                                <table class="table table-striped table-bordered nowrap" id="dataTable" width="100%" align="center" cellspacing="0" data-role="datatable" data-info="false">
-                                    <tbody>
-                                        <thead>
-                                        <tr>
-                                            <th>Código del Producto</th>
-                                            <th>Nombre del producto</th>
-                                            <th>Cantidad</th>
-                                            <th>Precio</th>
-                                            <th>Total</th>
-                                            <th>Opciones</th>
-                                        </tr>
-                                        </thead>        
-                                        <tr>
-                                            <td value="752">PTPPFR001</td>
-                                            <td>Fri-Oso Fardo Uva 150 Barras</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="738">PTPPFR002</td>
-                                            <td>Fri-Oso Fardo Naranja 150 Barras</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
+                                <div>
+                                    <table class="table table-striped table-bordered nowrap" id="dataTable" width="100%" align="center" cellspacing="0" data-role="datatable" data-info="false">
+                                        <tbody>
+                                            <thead>
+                                            <tr>
+                                                <th>Código del Producto</th>
+                                                <th>Nombre del producto</th>
+                                                <th>Cantidad</th>
+                                                <th>Precio</th>
+                                                <th>Total</th>
+                                                <th>Opciones</th>
+                                            </tr>
+                                            </thead>        
+                                            <tr>
+                                                <td value="752">PTPPFR001</td>
+                                                <td>Fri-Oso Fardo Uva 150 Barras</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="738">PTPPFR002</td>
+                                                <td>Fri-Oso Fardo Naranja 150 Barras</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="722">PTPPFR003</td>
+                                                <td>Fri-Oso Fardo Fresa 150 Barras</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="715">PTPPFR005</td>
+                                                <td>Fri-Oso Fardo Chicle 150 Barras</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="741">PTPPFR006</td>
+                                                <td>Fri-Oso Fardo Piña 150 Barras</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="748">PTPPFR015</td>
+                                                <td>Fri-Oso Fardo Tamarindo 150 Barras</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="732">PTPPFR016</td>
+                                                <td>Fri-Oso Fardo Manzana 150 Barras</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="736">PTPPFR039</td>
+                                                <td>Fri-Oso Fardo Maracuya 150 Barras.</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="710">PTPPFR041</td>
+                                                <td>Fri-Oso Fardo 15 Unidades (10 barras Surtidas)</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="751">PTPPFR044</td>
+                                                <td>Fri-Oso Fardo Tamarindo-Enchilado 150 Barras</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
                                             
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="722">PTPPFR003</td>
-                                            <td>Fri-Oso Fardo Fresa 150 Barras</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="712">PTPPFR051</td>
+                                                <td>Fri-Oso Fardo 15*Tenpack Sabores-Temporada (10 barras Surtidas)</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="704">PTPPFR053</td>
+                                                <td>FRI-OSO Canasta Naranja 300 barras</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="700">PTPPFR054</td>
+                                                <td>FRI-OSO Canasta Fresa 300 barras</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="697">PTPPFR055</td>
+                                                <td>FRI-OSO Canasta Chicle 300 barras</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value=""></td>
+                                                <td></td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="709">PTPPFR056</td>
+                                                <td>FRI-OSO Canasta Uva 300 barras.</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="702">PTPPFR057</td>
+                                                <td>FRI-OSO Canasta Manzana 300 barras</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="705">PTPPFR058</td>
+                                                <td>FRI-OSO Canasta Piña 300 barras</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="703">PTPPFR060</td>
+                                                <td>Fri-Oso Canasta Maracuya 300 Barras</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="707">PTPPFR062</td>
+                                                <td>Fri-Oso Canasta Tamarindo-Enchilado 300 Barras</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="699">PTPPFR063</td>
+                                                <td>Fri-Oso Canasta Cola 300 Barras.</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="698">PTPPFR064</td>
+                                                <td>Fri-Oso Canasta Coco-Fresa 300 Barras.</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="730">PTPPFR067</td>
+                                                <td>Fri-Oso Fardo Limon-Pepita 150 Barras.</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
+                                            >
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="1277">PTPPGE044</td>
+                                                <td>Gel-Oso Fardo 40 Unidades (10 barras Surtidas)PROMOCION.</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td>Q120.00</td>
+                                                <td></td>
+                                                
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td value="1279">PTPPGE045</td>
+                                                <td>Geloso Surtido 150 unidades</td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px" ></td>
+                                                <td>Q67.50</td>
+                                                <td></td>
                                             
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="715">PTPPFR005</td>
-                                            <td>Fri-Oso Fardo Chicle 150 Barras</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="741">PTPPFR006</td>
-                                            <td>Fri-Oso Fardo Piña 150 Barras</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="748">PTPPFR015</td>
-                                            <td>Fri-Oso Fardo Tamarindo 150 Barras</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="732">PTPPFR016</td>
-                                            <td>Fri-Oso Fardo Manzana 150 Barras</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="736">PTPPFR039</td>
-                                            <td>Fri-Oso Fardo Maracuya 150 Barras.</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="710">PTPPFR041</td>
-                                            <td>Fri-Oso Fardo 15 Unidades (10 barras Surtidas)</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="751">PTPPFR044</td>
-                                            <td>Fri-Oso Fardo Tamarindo-Enchilado 150 Barras</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                           
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="712">PTPPFR051</td>
-                                            <td>Fri-Oso Fardo 15*Tenpack Sabores-Temporada (10 barras Surtidas)</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="704">PTPPFR053</td>
-                                            <td>FRI-OSO Canasta Naranja 300 barras</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="700">PTPPFR054</td>
-                                            <td>FRI-OSO Canasta Fresa 300 barras</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="697">PTPPFR055</td>
-                                            <td>FRI-OSO Canasta Chicle 300 barras</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value=""></td>
-                                            <td></td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="709">PTPPFR056</td>
-                                            <td>FRI-OSO Canasta Uva 300 barras.</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="702">PTPPFR057</td>
-                                            <td>FRI-OSO Canasta Manzana 300 barras</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="705">PTPPFR058</td>
-                                            <td>FRI-OSO Canasta Piña 300 barras</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="703">PTPPFR060</td>
-                                            <td>Fri-Oso Canasta Maracuya 300 Barras</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="707">PTPPFR062</td>
-                                            <td>Fri-Oso Canasta Tamarindo-Enchilado 300 Barras</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="699">PTPPFR063</td>
-                                            <td>Fri-Oso Canasta Cola 300 Barras.</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="698">PTPPFR064</td>
-                                            <td>Fri-Oso Canasta Coco-Fresa 300 Barras.</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="730">PTPPFR067</td>
-                                            <td>Fri-Oso Fardo Limon-Pepita 150 Barras.</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                           >
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="1277">PTPPGE044</td>
-                                            <td>Gel-Oso Fardo 40 Unidades (10 barras Surtidas)PROMOCION.</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                            <td>Q120.00</td>
-                                            <td></td>
-                                            
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td value="1279">PTPPGE045</td>
-                                            <td>Geloso Surtido 150 unidades</td>
-                                            <td><input type="number" placeholder="0" size=10 style="width:55px" ></td>
-                                            <td>Q67.50</td>
-                                            <td></td>
-                                           
-                                            <td><i class="fas fa-trash-alt"></i></td>
-                                        </tr>
+                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            </tr>
 
-                                    </tbody>
+                                        </tbody>
+                                            
                                         
-                                    
-                                </table>
+                                    </table>
+
+                                    <br><br>
+                                    <button>Calcular Precios</button>
+                                </div>
                                 <br>
                             </form>
                         </div>
