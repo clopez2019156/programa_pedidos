@@ -168,6 +168,8 @@ while ($fila = mysqli_fetch_array($respuesta_semanas)) {
         echo '<h6 class="collapse-header">Opciones:</h6>';
         echo '<a class="collapse-item" href="Pedidos/Pedido_busqueda.php"> <i class="fas fa-stream"></i>&nbsp Buscar</a>';
         echo '<a class="collapse-item" href="Pedidos/AddCliente.php"> <i class="fas fa-plus"></i>&nbsp Agregar</a>';
+        
+        echo '<a class="collapse-item" href="Pedidos/AddClienteFriosos.php"> <i class="fas fa-plus"></i>&nbsp Plantilla Friosos</a>';
         echo '</div>';
         echo '</div>';
         echo '</li>';
@@ -182,6 +184,7 @@ while ($fila = mysqli_fetch_array($respuesta_semanas)) {
         echo '<h6 class="collapse-header">Opciones:</h6>';
         echo '<a class="collapse-item" href="Pedidos_Proquima/Pedido_busqueda.php"> <i class="fas fa-stream"></i>&nbsp Buscar</a>';
         echo '<a class="collapse-item" href="Pedidos_Proquima/AddCliente.php"> <i class="fas fa-plus"></i>&nbsp Agregar</a>';
+        echo '<a class="collapse-item" href="Pedidos/AddClienteFriosos.php"> <i class="fas fa-plus"></i>&nbsp Plantilla Friosos</a>';
         echo '</div>';
         echo '</div>';
         echo '</li>';
