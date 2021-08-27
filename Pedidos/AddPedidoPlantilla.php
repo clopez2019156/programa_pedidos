@@ -42,267 +42,311 @@ $id = $_SESSION["idUsuario"];
 <!-- /.container-fluid -->
 
 <!-- Inicia Formulario  -->
-<div>
-    <div class="card o-hidden border-0 shadow-lg my-5">
-        <div class="card-body p-0">
-            <!-- Nested Row within Card Body -->
-            <div class="row" style="width: 100%" align="center">
-                <div class="col-lg">
+    <div>
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row" style="width: 100%" align="center">
+                    <div class="col-lg">
 
-                    <div class="p-5">
-                        <div class="text-left">
-                            <h1 class="h5 text-gray-900 mb-4 text-center">Por favor llene el siguiente formulario:</h1>
-                        </div>
-                        <form>
-                            <div class="col-sm-10">
-
-                                <h2 class="h6 text-gray-700 mb-4" align="left">Datos del cliente:</h2>
-                                <input type="hidden" id="idCliente" value="<?= $_POST["idCliente"]; ?>">
-                                <input type="hidden" id="idVendedor" value="<?= $id ?>">
-                                <label>Codigo:</label>
-                                <input type="text" class="form-control form-control-user" id="codigo" name="codigo" value="<?= $codigoCliente; ?>" disabled required>
-                                <br>
-                                <label>Cliente:</label>
-                                <input type="text" class="form-control form-control-user" id="cliente" name="cliente" value="<?= $nombreCliente; ?>" disabled required>
-                                <br>
-                                <label>Tipo de entrega:</label>
-                                <select class="browser-default custom-select" id="idTipoEntrega" name="idTipoEntrega">
-                                    <?php
-                                    $sql = "select * from TipoEntrega";
-                                    $resultado = mysqli_query($con, $sql);
-                                    while ($fila = mysqli_fetch_array($resultado)) {
-                                        $seleccionado = "";
-                                        if ($idTipoEntrega == $fila["idTipoEntrega"]) {
-                                            $seleccionado = "selected";
-                                        }
-                                        echo "<option value='" . $fila["idTipoEntrega"] . "' " . $seleccionado . ">" . $fila["nombre"] . "</option>";
-                                    }
-                                    ?>
-                                </select>
-                                <br>
-                                <br>
-                                <input type="text" class="form-control form-control-user" id="direccion" name="direccion" placeholder="Dirección de entrega del pedido" required>
-                                <br>
-                                <input type="number" class="form-control form-control-user" id="telefono" name="telefono" placeholder="Teléfono de contacto" required>
-                                <br>
-                                <label>Fecha de despacho:</label>
-                                <input type="date" class="form-control form-control-user" id="fecha" name="fecha" required>
-                                <br>
-                                <label>Hora de entrega:</label>
-                                <input type="time" class="form-control form-control-user" id="hora" name="hora" required>
-                                <br>
-                                <input type="text" class="form-control form-control-user" id="observaciones" name="observaciones" placeholder="Observaciones">
-                                <br>
-
-                                <div>
-                                <div class="p-5" style="overflow-x:auto;">
+                        <div class="p-5">
+                            <div class="text-left">
+                                <h1 class="h5 text-gray-900 mb-4 text-center">Por favor llene el siguiente formulario:</h1>
                             </div>
+                            <form>
+                                <div class="col-sm-10">
 
-                            <table class="table table-striped table-bordered nowrap" id="dataTable" width="100%" align="center" cellspacing="0" data-role="datatable" data-info="false">
-                                <thead>
-                                    <tr>
-                                        <th>Código del Producto</th>
-                                        <th>Nombre del producto</th>
-                                        <th>Cantidad</th>
-                                        <th>Precio</th>
-                                        <th>Total</th>
-                                        <th>Observaciones</th>
-                                        <th>Opciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                    <td value="752">PTPPFR001</td>
-                                    <td>Fri-Oso Fardo Uva 150 Barras</td>
-                                    <td><input type="number" placeholder="0"></td>
-                                    <td>Q67.50</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><i class="fas fa-trash-alt"></i></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <br>
-
-                        </form>
-                    </div>
-
-                                </div>
+                                    <h2 class="h6 text-gray-700 mb-4" align="left">Datos del cliente:</h2>
+                                    <input type="hidden" id="idCliente" value="<?= $_POST["idCliente"]; ?>">
+                                    <input type="hidden" id="idVendedor" value="<?= $id ?>">
+                                    <label>Codigo:</label>
+                                    <input type="text" class="form-control form-control-user" id="codigo" name="codigo" value="<?= $codigoCliente; ?>" disabled required>
                                     <br>
-                                <hr>
-                                <h2 class="h6 text-gray-700 mb-4" align="left">Detalle del pedido:</h2>
-                                <label>Codigo del producto:</label>
-                                <br>
-                                <select class="idProducto browser-default custom-select" id="idProducto" name="idProducto"></select>
-
-                                <script type="text/javascript">
-                                    $('.idProducto').select2({
-                                        placeholder: 'Codigo del Producto',
-                                        ajax: {
-                                            url: 'productos.php',
-                                            dataType: 'json',
-                                            delay: 250,
-                                            processResults: function(data) {
-                                                return {
-                                                    results: data
-                                                };
-                                            },
-                                            cache: true
+                                    <label>Cliente:</label>
+                                    <input type="text" class="form-control form-control-user" id="cliente" name="cliente" value="<?= $nombreCliente; ?>" disabled required>
+                                    <br>
+                                    <label>Tipo de entrega:</label>
+                                    <select class="browser-default custom-select" id="idTipoEntrega" name="idTipoEntrega">
+                                        <?php
+                                        $sql = "select * from TipoEntrega";
+                                        $resultado = mysqli_query($con, $sql);
+                                        while ($fila = mysqli_fetch_array($resultado)) {
+                                            $seleccionado = "";
+                                            if ($idTipoEntrega == $fila["idTipoEntrega"]) {
+                                                $seleccionado = "selected";
+                                            }
+                                            echo "<option value='" . $fila["idTipoEntrega"] . "' " . $seleccionado . ">" . $fila["nombre"] . "</option>";
                                         }
-                                    });
-                                </script>
-                                <br>
-                                <br>
-                                <label>Cantidad:</label>
-                                <input type="number" id="cantidad" min="0" value=1 class="form-control form-control-user" name="cantidad" placeholder="cantidad" required>
-                                <br>
-                                <label>Precio:</label>
-                                <input type="number" id="precio" min="0" value=1 class="form-control form-control-user" name="precio" placeholder="cantidad" required>
-                                <br>
-                                <input type="text" class="form-control form-control-user" id="observacionesProducto" name="observacionesProducto" placeholder="Observaciones">
-                                <br>
-                                <button class="btn btn-warning" type="button" onclick="myFunction()">Ingresar Detalle</button>
+                                        ?>
+                                    </select>
+                                    <br>
+                                    <br>
+                                    <input type="text" class="form-control form-control-user" id="direccion" name="direccion" placeholder="Dirección de entrega del pedido" required>
+                                    <br>
+                                    <input type="number" class="form-control form-control-user" id="telefono" name="telefono" placeholder="Teléfono de contacto" required>
+                                    <br>
+                                    <label>Fecha de despacho:</label>
+                                    <input type="date" class="form-control form-control-user" id="fecha" name="fecha" required>
+                                    <br>
+                                    <label>Hora de entrega:</label>
+                                    <input type="time" class="form-control form-control-user" id="hora" name="hora" required>
+                                    <br>
+                                    <input type="text" class="form-control form-control-user" id="observaciones" name="observaciones" placeholder="Observaciones">
+                                    <br>
 
-                            </div>
+                                    <div>
+                                    <div class="p-5" style="overflow-x:auto;">
+                                </div>
+                                <table class="table table-striped table-bordered nowrap" id="dataTable" width="100%" align="center" cellspacing="0" data-role="datatable" data-info="false">
+                                    <tbody>
+                                        <thead>
+                                        <tr>
+                                            <th>Código del Producto</th>
+                                            <th>Nombre del producto</th>
+                                            <th>Cantidad</th>
+                                            <th>Precio</th>
+                                            <th>Total</th>
+                                            <th>Opciones</th>
+                                        </tr>
+                                        </thead>        
+                                        <tr>
+                                            <td value="752">PTPPFR001</td>
+                                            <td>Fri-Oso Fardo Uva 150 Barras</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="738">PTPPFR002</td>
+                                            <td>Fri-Oso Fardo Naranja 150 Barras</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="722">PTPPFR003</td>
+                                            <td>Fri-Oso Fardo Fresa 150 Barras</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="715">PTPPFR005</td>
+                                            <td>Fri-Oso Fardo Chicle 150 Barras</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="741">PTPPFR006</td>
+                                            <td>Fri-Oso Fardo Piña 150 Barras</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="748">PTPPFR015</td>
+                                            <td>Fri-Oso Fardo Tamarindo 150 Barras</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="732">PTPPFR016</td>
+                                            <td>Fri-Oso Fardo Manzana 150 Barras</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="736">PTPPFR039</td>
+                                            <td>Fri-Oso Fardo Maracuya 150 Barras.</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="710">PTPPFR041</td>
+                                            <td>Fri-Oso Fardo 15 Unidades (10 barras Surtidas)</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="751">PTPPFR044</td>
+                                            <td>Fri-Oso Fardo Tamarindo-Enchilado 150 Barras</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                           
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="712">PTPPFR051</td>
+                                            <td>Fri-Oso Fardo 15*Tenpack Sabores-Temporada (10 barras Surtidas)</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="704">PTPPFR053</td>
+                                            <td>FRI-OSO Canasta Naranja 300 barras</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="700">PTPPFR054</td>
+                                            <td>FRI-OSO Canasta Fresa 300 barras</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="697">PTPPFR055</td>
+                                            <td>FRI-OSO Canasta Chicle 300 barras</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value=""></td>
+                                            <td></td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="709">PTPPFR056</td>
+                                            <td>FRI-OSO Canasta Uva 300 barras.</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="702">PTPPFR057</td>
+                                            <td>FRI-OSO Canasta Manzana 300 barras</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="705">PTPPFR058</td>
+                                            <td>FRI-OSO Canasta Piña 300 barras</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="703">PTPPFR060</td>
+                                            <td>Fri-Oso Canasta Maracuya 300 Barras</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="707">PTPPFR062</td>
+                                            <td>Fri-Oso Canasta Tamarindo-Enchilado 300 Barras</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="699">PTPPFR063</td>
+                                            <td>Fri-Oso Canasta Cola 300 Barras.</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="698">PTPPFR064</td>
+                                            <td>Fri-Oso Canasta Coco-Fresa 300 Barras.</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="730">PTPPFR067</td>
+                                            <td>Fri-Oso Fardo Limon-Pepita 150 Barras.</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                           >
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="1277">PTPPGE044</td>
+                                            <td>Gel-Oso Fardo 40 Unidades (10 barras Surtidas)PROMOCION.</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                            <td>Q120.00</td>
+                                            <td></td>
+                                            
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td value="1279">PTPPGE045</td>
+                                            <td>Geloso Surtido 150 unidades</td>
+                                            <td><input type="number" placeholder="0" size=10 style="width:55px" ></td>
+                                            <td>Q67.50</td>
+                                            <td></td>
+                                           
+                                            <td><i class="fas fa-trash-alt"></i></td>
+                                        </tr>
 
+                                    </tbody>
+                                        
+                                    
+                                </table>
+                                <br>
+                            </form>
+                        </div>
                     </div>
-                    <div class="p-5" style="overflow-x:auto;">
-                        <table class="table table-striped table-bordered nowrap" id="dataTable" width="100%" align="center" cellspacing="0" data-role="datatable" data-info="false">
-                            <thead>
-                                <tr>
-                                    <th>Producto</th>
-                                    <th>Cantidad</th>
-                                    <th>Precio</th>
-                                    <th>Total</th>
-                                    <th>Observaciones</th>
-                                    <th><i class="fas fa-trash-alt"></i></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
-                        <br>
-
-                        </form>
-                    </div>
-                    <br>
-                    <input type="text" class="form-control form-control-user" id="observacionesA" name="observacionesA" placeholder="Observaciones Adicionales">
-                    <br>
-                    <form action="../inventarios_php/bd/servidor.php" method="POST" enctype="multipart/form-data">
-                        <label class="col-sm-2 control-label">Foto del recibo</label>
-                        <input type="file" class="form-control-file" id="imagen" name="imagen">
-                        <button type="submit" name="foto_pedido" id="foto_pedido" hidden class="btn btn-primary btn-block">Guardar</button>
-                    </form>
-                    <br>
-                    <input id="btn_enviar" type="button" onclick="myFunction2()" class="btn btn-primary" value="Ingresar Pedido">
-                    <br><br><br><br><br>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Termina Formulario  -->
-    <!-- End of Main Content -->
-    <script>
-        var elementos = new Array();
-        var aux = 1;
-        totalidad = 0;
-
-        function myFunction() {
-            var sel = document.getElementById('idProducto');
-            var opt = sel.options[sel.selectedIndex];
-            if (sel.value == "" || document.getElementById('cantidad').value == "" || document.getElementById('cantidad').value == "0" ||
-                document.getElementById('precio').value == "" || document.getElementById('precio').value == "0") {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Datos Inválidos',
-                    text: 'Los datos que ha ingresado son inválidos, asegurese de haber escogido un código de producto',
-                    footer: '<a href></a>'
-                });
-                return false;
-            }
-            var table = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
-            var row = table.insertRow(0);
-            var cell1 = row.insertCell(0);
-            var cell2 = row.insertCell(1);
-            var cell3 = row.insertCell(2);
-            var cell4 = row.insertCell(3);
-            var cell5 = row.insertCell(4);
-            var cell6 = row.insertCell(5);
-
-            cell1.innerHTML = opt.text;
-            cell2.innerHTML = document.getElementById('cantidad').value;
-            cell3.innerHTML = document.getElementById('precio').value;
-            cell4.innerHTML = (document.getElementById('cantidad').value * document.getElementById('precio').value);
-            cell5.innerHTML = document.getElementById('observacionesProducto').value;
-            cell6.innerHTML = '<input type="button" class="btn btn-danger" value="Eliminar componente" onclick="deleteRow(this, ' + aux + ', ' + (document.getElementById('cantidad').value * document.getElementById('precio').value) + ')"/>';
-
-            elementos.push({
-                idelemento: aux,
-                idProducto: sel.value,
-                cantidad: document.getElementById('cantidad').value,
-                precio: document.getElementById('precio').value,
-                total: (document.getElementById('cantidad').value * document.getElementById('precio').value),
-                observacionesProducto: document.getElementById('observacionesProducto').value,
-            });
-            totalidad = totalidad + (document.getElementById('cantidad').value * document.getElementById('precio').value);
-            aux++;
-            console.log(totalidad);
-        }
-
-        function myFunction2() {
-            if (document.getElementById("direccion").value == "" || document.getElementById("telefono").value == "" ||
-                document.getElementById("fecha").value == "" || document.getElementById("hora").value == "") {
-
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Datos Inválidos',
-                    text: 'Los datos que ha ingresado son inválidos, asegurese de haber escogido un código de producto',
-                    footer: '<a href></a>'
-                });
-                return false;
-            }
-            var urlUsers = 'Pedido_i.php';
-            var data = new FormData();
-
-            data.append("fechaDespacho", document.getElementById("fecha").value);
-            data.append("direccion", document.getElementById("direccion").value);
-            data.append("telefono", document.getElementById("telefono").value);
-            data.append("observacion", document.getElementById("observaciones").value);
-            data.append("hora", document.getElementById("hora").value);
-            data.append("observacionesA", document.getElementById("observacionesA").value);
-            data.append("total", totalidad);
-            data.append("idVendedor", document.getElementById("idVendedor").value);
-            data.append("idTipoEntrega", document.getElementById("idTipoEntrega").value);
-            data.append("idCliente", document.getElementById("idCliente").value);
-            data.append("tablita", JSON.stringify(elementos));
-            axios.post(urlUsers, data).then(response => {
-
-                console.log(response.data);
-                if (response.status == 200) {
-                    if (response.data == "funciono") {
-                        document.getElementById("foto_pedido").click();
-                    }
-                }
-            });
-        }
-
-        function deleteRow(btn, aux, total2) {
-            var index = elementos.map(function(e) {
-                return e.idelemento;
-            }).indexOf(aux);
-            if (index > -1) {
-                elementos.splice(index, 1);
-            }
-            var row = btn.parentNode.parentNode;
-            //console.log(row);
-            row.parentNode.removeChild(row);
-            totalidad = totalidad - total2;
-            console.log(elementos);
-            console.log(totalidad);
-
-        }
-    </script>
     <?PHP
     include("../includes/footersindatatable.php");
     include("../bd/fin_conexion.php");
-    ?>
+?>
