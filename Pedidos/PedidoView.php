@@ -1,6 +1,7 @@
 <?PHP
 include("../bd/inicia_conexion.php");
 include("../includes/header.php");
+
 $sql = "select p.idTipoEntrega, p.direccion, p.telefono, DATE(p.fecha_despacho) as fecha_despacho, DATE(p.fecha_emision) as fecha_emision, p.hora, p.observacion,p.total, p.observacion_a, c.nombre as cliente, c.codigo as codigo from pedidounhesa p inner join usuario u on p.idvendedor = u.idusuario inner join tipoentrega t on p.idtipoentrega = t.idtipoentrega inner join cliente c on p.idcliente = c.idcliente inner join estado e on p.idestado = e.idestado";
 $sql = $sql . " where p.idpedidounhesa = " . $_POST["idPedido"];
 $_SESSION["id_del_pedido"] = $_POST["idPedido"];
@@ -75,8 +76,9 @@ while ($fila = mysqli_fetch_array($resultadoUsuario)) {
             <form>
               <div class="col-sm-10">
                 <h2 class="h6 text-gray-700 mb-4" align="left">Datos del cliente:</h2>
-                <input type="hidden" id="idCliente" value="<?= $_POST["idCliente"]; ?>">
+                
                 <input type="hidden" id="idVendedor" value="<?= $id ?>">
+                
                 <label>Codigo:</label>
                 <input type="text" class="form-control form-control-user" id="codigo" name="codigo" value="<?= $codigoCliente; ?>" disabled required>
                 <br>
@@ -171,7 +173,7 @@ while ($fila = mysqli_fetch_array($resultadoUsuario)) {
       <script src="../js/pedido.js"></script>
       <!-- Termina Formulario  -->
       <!-- End of Main Content -->
-                   <!--  Hola -->
+
       <?PHP
       include("../includes/footer.php");
       include("../bd/fin_conexion.php");

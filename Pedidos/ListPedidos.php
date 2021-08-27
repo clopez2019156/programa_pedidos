@@ -75,56 +75,53 @@ include("../includes/header.php");
             $sql = $sql . " and '" . $_POST["maximaFecha"] . "' and p.idVendedor = " . $_SESSION["idUsuario"];
             $resultado = mysqli_query($con, $sql);
             // echo $sql;
-            while ($fila = mysqli_fetch_array($resultado)) {
-              if ( $fila["estado"] != "Confirmado"){
-                echo "<tr>";
-                echo "<td>" . $fila["idPedidoUnhesa"] . "</td>";
-                echo "<td>" . $fila["fecha_emision"] . "</td>";
-                echo "<td>" . $fila["cliente"] . "</td>";
-                echo "<td>" . $fila["vendedor"] . "</td>";
-                echo "<td>" . $fila["tipoentrega"] . "</td>";
-                echo "<td>" . $fila["total"] . "</td>";
-                echo "<td>" . $fila["estado"] . "</td>";
-                echo "<td align = 'center'>";
-                echo "<a href = 'javascript:fun_view(" . $fila["idPedidoUnhesa"] . ");'>";
-                echo "<i class=\"fas fa-search\"></i>";
-                echo "</td>";
-                echo "<td align = 'center'>";
-                echo "<a href = 'javascript:fun_view3(" . $fila["idPedidoUnhesa"] . ");'>";
-                echo "<i class=\"fas fa-ban\"></i>";
-                echo "</td>";
-                echo "</tr>";
-                
-              }else{
-                echo "<tr>";
-                echo "<td>" . $fila["idPedidoUnhesa"] . "</td>";
-                echo "<td>" . $fila["fecha_emision"] . "</td>";
-                echo "<td>" . $fila["cliente"] . "</td>";
-                echo "<td>" . $fila["vendedor"] . "</td>";
-                echo "<td>" . $fila["tipoentrega"] . "</td>";
-                echo "<td>" . $fila["total"] . "</td>";
-                echo "<td>" . $fila["estado"] . "</td>";
-                echo "<td align = 'center'>";
-                echo "<a href = 'javascript:fun_view(" . $fila["idPedidoUnhesa"] . ");'>";
-                echo "<i class=\"fas fa-search\"></i>";
-                echo "</td>";
-                echo "<td align = 'center'>";
-                echo "<a href = 'javascript:fun_view2(" . $fila["idPedidoUnhesa"] . ");'>";
-                echo "<i class=\"fas fa-sync-alt\"></i>";
-                echo "</td>";
-                echo "</tr>";
-              }
-          }        
+            
+              while ($fila = mysqli_fetch_array($resultado)) {
+                  if ( $fila["estado"] != "Confirmado"){
+                    echo "<tr>";
+                    echo "<td>" . $fila["idPedidoUnhesa"] . "</td>";
+                    echo "<td>" . $fila["fecha_emision"] . "</td>";
+                    echo "<td>" . $fila["cliente"] . "</td>";
+                    echo "<td>" . $fila["vendedor"] . "</td>";
+                    echo "<td>" . $fila["tipoentrega"] . "</td>";
+                    echo "<td>" . $fila["total"] . "</td>";
+                    echo "<td>" . $fila["estado"] . "</td>";
+                    echo "<td align = 'center'>";
+                    echo "<a href = 'javascript:fun_view(" . $fila["idPedidoUnhesa"] . ");'>";
+                    echo "<i class=\"fas fa-search\"></i>";
+                    echo "</td>";
+                    echo "<td align = 'center'>";
+                    echo "<a href = 'javascript:fun_view3(" . $fila["idPedidoUnhesa"] . ");'>";
+                    echo "<i class=\"fas fa-ban\"></i>";
+                    echo "</td>";
+                    echo "</tr>";
+                    
+                  }else{
+                    echo "<tr>";
+                    echo "<td>" . $fila["idPedidoUnhesa"] . "</td>";
+                    echo "<td>" . $fila["fecha_emision"] . "</td>";
+                    echo "<td>" . $fila["cliente"] . "</td>";
+                    echo "<td>" . $fila["vendedor"] . "</td>";
+                    echo "<td>" . $fila["tipoentrega"] . "</td>";
+                    echo "<td>" . $fila["total"] . "</td>";
+                    echo "<td>" . $fila["estado"] . "</td>";
+                    echo "<td align = 'center'>";
+                    echo "<a href = 'javascript:fun_view(" . $fila["idPedidoUnhesa"] . ");'>";
+                    echo "<i class=\"fas fa-search\"></i>";
+                    echo "</td>";
+                    echo "<td align = 'center'>";
+                    echo "<a href = 'javascript:fun_view2(" . $fila["idPedidoUnhesa"] . ");'>";
+                    echo "<i class=\"fas fa-sync-alt\"></i>";
+                    echo "</td>";
+                    echo "</tr>";
+                  }
+              }            
             ?>
           </tbody>
         </table>
       </div>
     </div>
   </div>
-
-
-
-
 </div>
 <!-- /.container-fluid -->
 
@@ -141,7 +138,6 @@ include("../includes/header.php");
     document.fview.submit();
   }
 </script>
-
 <!-- Repetir pedido -->
 <form name='fview2' method='post' action='zvista_gabriel.php'>
   <input type="hidden" name="idPedido2">
