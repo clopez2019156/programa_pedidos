@@ -203,6 +203,22 @@ while ($fila = mysqli_fetch_array($respuesta_semanas)) {
           </div>
         </div>
       </li>
+      <!-- Pedidos Online -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#OpcionesPedidoOnline" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-money-check-alt"></i>
+          <span>Pedidos Online</span>
+        </a>
+
+        <div id="OpcionesPedidoOnline" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Opciones:</h6>
+            <a class="collapse-item" href="./inventarios_php/buscar_pedido_online.html"><i class="fas fa-stream"></i>&nbsp Buscar</a>
+            <a class="collapse-item" href="./inventarios_php/agregar_pedido_online.html">
+              <i class="fas fa-receipt"></i>&nbsp Agregar</a>
+          </div>
+        </div>
+      </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
