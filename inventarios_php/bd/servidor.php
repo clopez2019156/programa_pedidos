@@ -561,3 +561,37 @@ function updateConteos()
     }
     mysqli_select_db($con, "dbinventarios");
 }
+
+
+//---------------Plantilla friosos consultas
+if(isset($_GET)){
+    if(isset($_GET["quest"])){
+        if($_GET["quest"] == 'listar_productos'){
+            $mysql_query ="SELECT * FROM producto";
+            $resultado = mysqli_query($con, $mysql_query);
+
+            if(!$resultado){
+                die('el Query falló:' . mysqli_error($con));
+            }
+
+            if(mysqli_num_rows($resultado)>0){
+                $json = array();
+                while($fila = mysqli_fetch_array($resultado)){
+                    $json[] = array(
+                        'idProducto' => $fila["idProducto"],
+                        'nombre' => $fila["nombre"],
+                        'codigo' => $fila["codigo"]
+                    );
+
+                }
+                $json_string = json_encode($json);
+                echo $json_string;
+            } else {
+                echo 'no hay registros';
+            }
+
+        
+        }
+    }
+
+}
