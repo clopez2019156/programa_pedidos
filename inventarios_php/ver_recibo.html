@@ -12,16 +12,12 @@
     <title>Pedidos</title>
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
-    <script data-search-pseudo-elements defer
-        src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
-        crossorigin="anonymous"></script>
+    <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js" crossorigin="anonymous"></script>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -42,7 +38,8 @@
                 <div class="sidebar-brand-icon ">
                     <i class="fas fa-cocktail"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Pedidos </div> <!-- titulo-->
+                <div class="sidebar-brand-text mx-3">Pedidos </div>
+                <!-- titulo-->
             </a>
 
             <!-- Divider -->
@@ -67,33 +64,27 @@
 
             <!-- Nav Item - Pedidos -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#OpcionesPedidos"
-                    aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#OpcionesPedidos" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-money-check-alt"></i>
                     <span>Pedidos</span>
                 </a>
 
-                <div id="OpcionesPedidos" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
+                <div id="OpcionesPedidos" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Opciones:</h6>
-                        <a class="collapse-item" href="/programa_pedidos/Pedidos/Pedido_busqueda.php"> <i
-                                class="fas fa-stream"></i>&nbsp Buscar</a>
-                        <a class="collapse-item" href="/programa_pedidos/Pedidos/AddCliente.php"> <i
-                                class="fas fa-plus"></i>&nbsp Agregar</a>
+                        <a class="collapse-item" href="/programa_pedidos/Pedidos/Pedido_busqueda.php"> <i class="fas fa-stream"></i>&nbsp Buscar</a>
+                        <a class="collapse-item" href="/programa_pedidos/Pedidos/AddCliente.php"> <i class="fas fa-plus"></i>&nbsp Agregar</a>
                     </div>
                 </div>
             </li>
             <!-- Nav Item - Recibos -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#OpcionesRecibos"
-                    aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#OpcionesRecibos" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-money-check-alt"></i>
                     <span>Recibos</span>
                 </a>
 
-                <div id="OpcionesRecibos" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
+                <div id="OpcionesRecibos" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Opciones:</h6>
                         <a class="collapse-item" href="../inventarios_php/ver_lista_recibos.html"><i
@@ -132,15 +123,13 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
                                 <p id="nombre_del_usuario"></p>
                                 <img class="img-profile rounded-circle" src="../img/Econsa.png">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a onclick="logout()" class="dropdown-item">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Logout
                                 </a>
@@ -162,11 +151,9 @@
                                         <div class="card-body">
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col mr-2">
-                                                    <div
-                                                        class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                         Cliente</div>
-                                                    <div class="h5 mb-0 font-weight-bold text-gray-800"
-                                                        id="nombre_cliente"></div>
+                                                    <div class="h5 mb-0 font-weight-bold text-gray-800" id="nombre_cliente"></div>
                                                 </div>
                                                 <div class="col-auto">
                                                     <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -181,11 +168,9 @@
                                         <div class="card-body">
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col mr-2">
-                                                    <div
-                                                        class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                         Código Cliente</div>
-                                                    <div class="h5 mb-0 font-weight-bold text-gray-800"
-                                                        id="codigo_cliente"></div>
+                                                    <div class="h5 mb-0 font-weight-bold text-gray-800" id="codigo_cliente"></div>
                                                 </div>
                                                 <div class="col-auto">
                                                     <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -200,11 +185,9 @@
                                         <div class="card-body">
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col mr-2">
-                                                    <div
-                                                        class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                         Saldo Cliente</div>
-                                                    <div class="h5 mb-0 font-weight-bold text-gray-800"
-                                                        id="saldo_cliente"></div>
+                                                    <div class="h5 mb-0 font-weight-bold text-gray-800" id="saldo_cliente"></div>
                                                 </div>
                                                 <div class="col-auto">
                                                     <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -223,8 +206,7 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
-                                            <table class="table table-bordered" id="dataTable" width="100%"
-                                                cellspacing="0">
+                                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                                 <thead>
                                                     <tr>
                                                         <th>Número de Factura</th>
@@ -262,8 +244,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1">#</span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Número de recibo físico"
-                                        aria-label="" id="recibo_fisico" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" placeholder="Número de recibo físico" aria-label="" id="recibo_fisico" aria-describedby="basic-addon1">
                                 </div>
                                 <br>
                                 <br>
@@ -303,13 +284,11 @@
                                 <form action="./bd/servidor.php" method="POST" enctype="multipart/form-data">
                                     <label class="col-sm-2 control-label">Foto del recibo</label>
                                     <input type="file" class="form-control-file" id="image" name="image">
-                                    <button type="submit" name="submit" id="submit" hidden
-                                        class="btn btn-primary btn-block">Guardar</button>
+                                    <button type="submit" name="submit" id="submit" hidden class="btn btn-primary btn-block">Guardar</button>
                                 </form>
                             </div>
                             <br>
-                            <button onclick="guardar()" type="button"
-                                class="btn btn-success btn-block lift lift-sm">Guardar y ver recibo</button>
+                            <button onclick="guardar()" type="button" class="btn btn-success btn-block lift lift-sm">Guardar y ver recibo</button>
                         </div>
 
                         <!-- Custom fonts for this template-->
@@ -319,9 +298,7 @@
                                 text-align: center;
                             }
                         </style>
-                        <script src="./node_modules/jquery/dist/jquery.js"></script>
-                        <script src="./node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
-                        <script src="./js/ver_recibo.js"></script>
+
                     </div>
                 </div>
                 <!-- End of Topbar -->
@@ -347,8 +324,7 @@
     <!-- End of Sidebar -->
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -379,6 +355,9 @@
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.min.js"></script>
     <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
+    <script src="./js/ver_recibo.js"></script>
 
 </body>
 

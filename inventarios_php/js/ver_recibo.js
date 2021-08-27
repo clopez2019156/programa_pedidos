@@ -1,7 +1,4 @@
 $(document).ready(function() {
-
-    // $('#dataTable').DataTable();
-
     $.ajax({
         url: './bd/servidor.php',
         type: 'GET',
@@ -12,9 +9,6 @@ $(document).ready(function() {
             var nombre = res;
             console.log(nombre);
             document.getElementById('nombre_del_usuario').innerHTML = nombre;
-            // // let list = JSON.parse(res);
-            // // list.forEach(list => {
-            // // });
         }
     });
 
