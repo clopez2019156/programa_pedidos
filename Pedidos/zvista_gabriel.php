@@ -173,6 +173,7 @@ while ($fila = mysqli_fetch_array($resultadoUsuario)) {
                                     <th>Total</th>
                                     <th>Observaciones</th>
                                     <th><i class="fas fa-trash-alt"></i></th>
+                                    <th><i class="fas fa-edit"></i></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -181,7 +182,6 @@ while ($fila = mysqli_fetch_array($resultadoUsuario)) {
                             $detalles = "SELECT concat(r.codigo,'-',r.nombre) as Producto, d.cantidad as Cantidad, d.precio as Precio,d.total as Total, d.observaciones as Observaciones
                             FROM detallepedidounhesa d inner join pedidounhesa p on d.idPedidoUnhesa = p.idPedidoUnhesa 
                             inner join producto r on d.idProducto = r.idProducto WHERE d.idPedidoUnhesa = $idPedidoUnhesaRep;";
-
                             $resultadorep = mysqli_query($con, $detalles);
                             ?>
                                 <script>
@@ -197,7 +197,7 @@ while ($fila = mysqli_fetch_array($resultadoUsuario)) {
                         </table>
                         <br>
                       </form>
-              </div>
+                </div>
                     <div class="container col-sm-10">
                       <!-- INGRESAR UN NUEVO DETALLE AL PEDIDO -->
                       <label>Observaciones Adicionales:</label>
@@ -219,8 +219,56 @@ while ($fila = mysqli_fetch_array($resultadoUsuario)) {
         </div>
       </div>
       
-      
-      
+    
+    
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body container">
+                <div style="text-align:center;">
+                <label>Editar el detalle seleccionado:</label>
+                </div>
+                <br>
+                <select class="idProducto browser-default custom-select" id="idProducto" name="idProducto"></select>
+                <script type="text/javascript">
+                    $('.idProducto').select2({
+                        placeholder: 'Codigo del Producto',
+                        ajax: {
+                            url: 'productos.php',
+                            dataType: 'json',
+                            delay: 250,
+                            processResults: function(data) {
+                                return {
+                                    results: data
+                                };
+                            },
+                            cache: true
+                        }
+                    });
+                </script>
+                <br>
+                <br>
+                <label>Cantidad:</label>
+                <input type="number" id="cantidad" min="0" value=1 class="form-control form-control-user" name="cantidad" placeholder="cantidad" required>
+                <br>
+                <label>Precio:</label>
+                <input type="number" id="precio" min="0" value=1 class="form-control form-control-user" name="precio" placeholder="cantidad" required>
+                <br>
+                <input type="text" class="form-control form-control-user" id="observacionesProducto" name="observacionesProducto" placeholder="Observaciones">
+                <br>          
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+          </div>
+        </div>
+      </div>
+    </div> 
 
 
       <!-- Termina Formulario  -->
@@ -255,6 +303,7 @@ while ($fila = mysqli_fetch_array($resultadoUsuario)) {
             var cell4 = row.insertCell(3);
             var cell5 = row.insertCell(4);
             var cell6 = row.insertCell(5);
+            var cell7 = row.insertCell(6);
             if (opcionI == 1) {
               cell1.innerHTML = opt.text;
             }else{
@@ -265,6 +314,7 @@ while ($fila = mysqli_fetch_array($resultadoUsuario)) {
             cell4.innerHTML = (cantidadF * precioF);
             cell5.innerHTML = observacionF;
             cell6.innerHTML = '<input type="button" class="btn btn-danger" value="Eliminar componente" onclick="deleteRow(this, ' + aux + ', ' + (document.getElementById('cantidad').value * document.getElementById('precio').value) + ')"/>';
+            cell7.innerHTML = '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Editar</button>';
             elementos.push({
                 idelemento: aux,
                 idProducto: sel.value,
@@ -277,6 +327,10 @@ while ($fila = mysqli_fetch_array($resultadoUsuario)) {
             aux++;
             console.log(totalidad);
         }
+
+
+
+
         function myFunction2() {
             if (document.getElementById("direccion").value == "" || document.getElementById("telefono").value == "" ||
                 document.getElementById("fecha").value == "" || document.getElementById("hora").value == "") {
