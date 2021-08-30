@@ -34,6 +34,7 @@ $(document).ready(function() {
                         } else {
                             document.getElementById("accordionSidebar").className = "navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled";
                         }
+                        4
                     });
                 }
             });
@@ -42,6 +43,7 @@ $(document).ready(function() {
 });
 
 function seleccion() {
+    4
     var opcion = document.getElementById('opcion').value;
     // alert(opcion);
     if (opcion == 0) {
