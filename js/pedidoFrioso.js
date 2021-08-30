@@ -13,7 +13,6 @@ function listarProductos() {
             quest: 'listar_productos'
         },
         success: function(res) {
-            console.log(res);
             try {
                 $("#select_pruductos").html('');
                 let lista = JSON.parse(res);

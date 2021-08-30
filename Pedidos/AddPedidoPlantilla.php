@@ -326,7 +326,27 @@ $id = $_SESSION["idUsuario"];
                                                 <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" placeholder="Código del producto" size=10 style="width:100px"></td>
+                                                <td id="idProducto"><form name="datos" method="post" action="AddPedidoPlantilla.php" onsubmit="return verifica_codigo(this);">
+                                                    <div class="p-3">
+                                                        <select class="idCliente browser-default custom-select" name="idCliente"></select>
+                                                    </div>
+                                                    <script type="text/javascript">
+                                                        $('.idCliente').select2({
+                                                            placeholder: 'Codigo del cliente',
+                                                            ajax: {
+                                                                url: 'producto.php',
+                                                                dataType: 'json',
+                                                                delay: 250,
+                                                                processResults: function(data) {
+                                                                    return {
+                                                                        results: data
+                                                                    };
+                                                                },
+                                                                cache: true
+                                                            }
+                                                        });
+                                                    </script>
+                                                </form></td>
                                                 <td></td>
                                                 <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
                                                 <td></td>
@@ -334,7 +354,27 @@ $id = $_SESSION["idUsuario"];
                                                 <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" placeholder="Código del producto" size=10 style="width:100px"></td>
+                                                <td><form name="datos" method="post" action="AddPedidoPlantilla.php" onsubmit="return verifica_codigo(this);">
+                                                    <div class="p-3">
+                                                        <select class="idCliente browser-default custom-select" name="idCliente"></select>
+                                                    </div>
+                                                    <script type="text/javascript">
+                                                        $('.idCliente').select2({
+                                                            placeholder: 'Codigo del cliente',
+                                                            ajax: {
+                                                                url: 'producto.php',
+                                                                dataType: 'json',
+                                                                delay: 250,
+                                                                processResults: function(data) {
+                                                                    return {
+                                                                        results: data
+                                                                    };
+                                                                },
+                                                                cache: true
+                                                            }
+                                                        });
+                                                    </script>
+                                                </form></td>
                                                 <td></td>
                                                 <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
                                                 <td></td>
@@ -342,7 +382,27 @@ $id = $_SESSION["idUsuario"];
                                                 <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" placeholder="Código del producto" size=10 style="width:100px"></td>
+                                                <td><form name="datos" method="post" action="AddPedidoPlantilla.php" onsubmit="return verifica_codigo(this);">
+                                                    <div class="p-3">
+                                                        <select class="idCliente browser-default custom-select" name="idCliente"></select>
+                                                    </div>
+                                                    <script type="text/javascript">
+                                                        $('.idCliente').select2({
+                                                            placeholder: 'Codigo del cliente',
+                                                            ajax: {
+                                                                url: 'producto.php',
+                                                                dataType: 'json',
+                                                                delay: 250,
+                                                                processResults: function(data) {
+                                                                    return {
+                                                                        results: data
+                                                                    };
+                                                                },
+                                                                cache: true
+                                                            }
+                                                        });
+                                                    </script>
+                                                </form></td>
                                                 <td></td>
                                                 <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
                                                 <td></td>
@@ -350,7 +410,27 @@ $id = $_SESSION["idUsuario"];
                                                 <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" placeholder="Código del producto" size=10 style="width:100px"></td>
+                                                <td><form name="datos" method="post" action="AddPedidoPlantilla.php" onsubmit="return verifica_codigo(this);">
+                                                    <div class="p-3">
+                                                        <select class="idCliente browser-default custom-select" name="idCliente"></select>
+                                                    </div>
+                                                    <script type="text/javascript">
+                                                        $('.idCliente').select2({
+                                                            placeholder: 'Codigo del cliente',
+                                                            ajax: {
+                                                                url: 'producto.php',
+                                                                dataType: 'json',
+                                                                delay: 250,
+                                                                processResults: function(data) {
+                                                                    return {
+                                                                        results: data
+                                                                    };
+                                                                },
+                                                                cache: true
+                                                            }
+                                                        });
+                                                    </script>
+                                                </form></td>
                                                 <td></td>
                                                 <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
                                                 <td></td>
@@ -358,7 +438,27 @@ $id = $_SESSION["idUsuario"];
                                                 <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
-                                                <td><select id="select_pruductos" style="width:100px"></select></td>
+                                                <td><form name="datos" method="post" action="AddPedidoPlantilla.php" onsubmit="return verifica_codigo(this);">
+                                                    <div class="p-3">
+                                                        <select class="idCliente browser-default custom-select" name="idCliente"></select>
+                                                    </div>
+                                                    <script type="text/javascript">
+                                                        $('.idCliente').select2({
+                                                            placeholder: 'Codigo del cliente',
+                                                            ajax: {
+                                                                url: 'producto.php',
+                                                                dataType: 'json',
+                                                                delay: 250,
+                                                                processResults: function(data) {
+                                                                    return {
+                                                                        results: data
+                                                                    };
+                                                                },
+                                                                cache: true
+                                                            }
+                                                        });
+                                                    </script>
+                                                </form></select></td>
                                                 <td></td>
                                                 <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
                                                 <td></td>
