@@ -92,7 +92,7 @@ $id = $_SESSION["idUsuario"];
                                     <input type="time" class="form-control form-control-user" id="hora" name="hora" required>
                                     <br>
                                     <input type="text" class="form-control form-control-user" id="observaciones" name="observaciones" placeholder="Observaciones">
-                                    <br>
+                                    
 
                                     <div>
                                     <div class="p-5" style="overflow-x:auto;">
@@ -116,7 +116,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
                                                 <td>Q67.50</td>
                                                 <td></td>
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="738">PTPPFR002</td>
@@ -125,7 +125,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="722">PTPPFR003</td>
@@ -134,7 +134,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="715">PTPPFR005</td>
@@ -143,7 +143,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="741">PTPPFR006</td>
@@ -152,7 +152,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="748">PTPPFR015</td>
@@ -161,7 +161,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="732">PTPPFR016</td>
@@ -170,7 +170,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="736">PTPPFR039</td>
@@ -179,7 +179,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="710">PTPPFR041</td>
@@ -188,7 +188,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="751">PTPPFR044</td>
@@ -197,7 +197,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                             
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="712">PTPPFR051</td>
@@ -206,7 +206,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="704">PTPPFR053</td>
@@ -215,7 +215,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="700">PTPPFR054</td>
@@ -224,7 +224,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="697">PTPPFR055</td>
@@ -233,16 +233,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
-                                            </tr>
-                                            <tr>
-                                                <td value=""></td>
-                                                <td></td>
-                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
-                                                <td>Q67.50</td>
-                                                <td></td>
-                                                
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="709">PTPPFR056</td>
@@ -251,7 +242,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="702">PTPPFR057</td>
@@ -260,7 +251,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="705">PTPPFR058</td>
@@ -269,7 +260,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="703">PTPPFR060</td>
@@ -278,7 +269,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="707">PTPPFR062</td>
@@ -287,7 +278,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="699">PTPPFR063</td>
@@ -296,7 +287,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="698">PTPPFR064</td>
@@ -305,7 +296,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="730">PTPPFR067</td>
@@ -313,8 +304,8 @@ $id = $_SESSION["idUsuario"];
                                                 <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
                                                 <td>Q67.50</td>
                                                 <td></td>
-                                            >
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                            
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="1277">PTPPGE044</td>
@@ -323,7 +314,7 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q120.00</td>
                                                 <td></td>
                                                 
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
                                             <tr>
                                                 <td value="1279">PTPPGE045</td>
@@ -332,7 +323,47 @@ $id = $_SESSION["idUsuario"];
                                                 <td>Q67.50</td>
                                                 <td></td>
                                             
-                                                <td><i class="fas fa-trash-alt"></i></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" placeholder="Código del producto" size=10 style="width:100px"></td>
+                                                <td></td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" placeholder="Código del producto" size=10 style="width:100px"></td>
+                                                <td></td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" placeholder="Código del producto" size=10 style="width:100px"></td>
+                                                <td></td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" placeholder="Código del producto" size=10 style="width:100px"></td>
+                                                <td></td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td><select id="select_pruductos" style="width:100px"></select></td>
+                                                <td></td>
+                                                <td><input type="number" placeholder="0" size=10 style="width:55px"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><i class="fas fa-trash-alt" style="margin-left: 25px"></i></td>
                                             </tr>
 
                                         </tbody>
@@ -340,8 +371,10 @@ $id = $_SESSION["idUsuario"];
                                         
                                     </table>
 
-                                    <br><br>
-                                    <button>Calcular Precios</button>
+                                    <br>
+                                    <button type="button" class="btn btn-success" style="margin-right: 30px">Calcular Total</button>
+                                    <button type="button" class="btn btn-primary">Enviar Pedido</button>
+                                    
                                 </div>
                                 <br>
                             </form>
@@ -355,3 +388,4 @@ $id = $_SESSION["idUsuario"];
     include("../includes/footersindatatable.php");
     include("../bd/fin_conexion.php");
 ?>
+<script src="../js/pedidoFrioso.js"></script>
