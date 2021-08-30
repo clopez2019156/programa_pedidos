@@ -385,6 +385,7 @@ $id = $_SESSION["idUsuario"];
         </div>
     </div>
     <?PHP
+    //prueba
     include("../includes/footersindatatable.php");
     include("../bd/fin_conexion.php");
 ?>
