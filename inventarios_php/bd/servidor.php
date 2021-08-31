@@ -595,3 +595,35 @@ if(isset($_GET)){
     }
 
 }
+
+if(isset($_GET)){
+    if(isset($_GET["quest"])){
+        if($_GET["quest"] == 'obtener_producto'){
+            $mysql_query ="SELECT * FROM producto WHERE idProducto=".$_GET['id'];
+            $resultado = mysqli_query($con, $mysql_query);
+
+            if(!$resultado){
+                die('el Query falló:' . mysqli_error($con));
+            }
+
+            if(mysqli_num_rows($resultado)>0){
+                $json = array();
+                while($fila = mysqli_fetch_array($resultado)){
+                    $json[] = array(
+                        'idProducto' => $fila["idProducto"],
+                        'nombre' => $fila["nombre"],
+                        'codigo' => $fila["codigo"]
+                    );
+
+                }
+                $json_string = json_encode($json);
+                echo $json_string;
+            } else {
+                echo 'no hay registros';
+            }
+
+        
+        }
+    }
+
+}
