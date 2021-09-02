@@ -560,6 +560,8 @@ function updateConteos()
         die('Could not connect: ' . mysqli_connect_error());
     }
     mysqli_select_db($con, "dbinventarios");
+
+    
 }
 
 
@@ -626,4 +628,81 @@ if(isset($_GET)){
         }
     }
 
+}
+
+if(isset($_GET)){
+    if(isset($_GET["quest"])){
+        if($_GET["quest"] == 'obtener_correlativo'){
+            $mysql_query ="SELECT MAX(correlativo)+1 as correlativo FROM pedidounhesa";
+            $resultado = mysqli_query($con, $mysql_query);
+
+            if(!$resultado){
+                die('el Query falló:' . mysqli_error($con));
+            }
+
+            if(mysqli_num_rows($resultado)>0){
+                $json = array();
+                while($fila = mysqli_fetch_array($resultado)){
+                    $json[] = array(
+                        'correlativo' => $fila["correlativo"]
+                    );
+
+                }
+                $json_string = json_encode($json);
+                echo $json_string;
+            } else {
+                echo 'no hay registros';
+            }
+
+        
+        }
+    }
+
+}
+
+if(isset($_GET)){
+    if(isset($_GET["quest"])){
+        if($_GET["quest"] == 'obtener_idPedido'){
+            $mysql_query ="SELECT MAX(idPedidoUnhesa) as id FROM pedidounhesa";
+            $resultado = mysqli_query($con, $mysql_query);
+
+            if(!$resultado){
+                die('el Query falló:' . mysqli_error($con));
+            }
+
+            if(mysqli_num_rows($resultado)>0){
+                $json = array();
+                while($fila = mysqli_fetch_array($resultado)){
+                    $json[] = array(
+                        'id' => $fila["id"]
+                    );
+
+                }
+                $json_string = json_encode($json);
+                echo $json_string;
+            } else {
+                echo 'no hay registros';
+            }
+
+        
+        }
+    }
+
+}
+
+if(isset($_POST)){
+    if(isset($_POST['quest'])){
+        if($_POST['quest'] == 'agregar_pedido_frioso'){
+            $mysql_query = "INSERT INTO pedidounhesa (correlativo, fecha_emision, fecha_despacho, direccion, observacion, telefono, hora, observacion_A, total, idVendedor, idtipoentrega, idCliente, idEstado)
+            values (".$_POST['correlativo'].",'NOW()','".$_POST['fecha_despacho']."','".$_POST['direccion']."','".$_POST['observacion']."',".$_POST['telefono'].",'".$_POST['hora']."','".$_POST['observacion_A']."',".$_POST['total'].",".$_POST['idVendedor'].",".$_POST['idTipoEntrega'].",".$_POST['idCliente'].",1)";
+
+            $result = mysqli_query($con, $mysql_query);
+
+            if (!$result) {
+                die('Query Falló ' . mysqli_error($con));
+            }else{
+                echo 'Success';
+            }
+        }
+    }
 }
