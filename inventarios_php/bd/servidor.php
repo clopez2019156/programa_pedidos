@@ -601,6 +601,8 @@ function updateConteos()
         die('Could not connect: ' . mysqli_connect_error());
     }
     mysqli_select_db($con, "dbinventarios");
+
+    
 }
 
 
@@ -635,4 +637,148 @@ if(isset($_GET)){
         }
     }
 
+}
+
+if(isset($_GET)){
+    if(isset($_GET["quest"])){
+        if($_GET["quest"] == 'obtener_producto'){
+            $mysql_query ="SELECT * FROM producto WHERE idProducto=".$_GET['id'];
+            $resultado = mysqli_query($con, $mysql_query);
+
+            if(!$resultado){
+                die('el Query falló:' . mysqli_error($con));
+            }
+
+            if(mysqli_num_rows($resultado)>0){
+                $json = array();
+                while($fila = mysqli_fetch_array($resultado)){
+                    $json[] = array(
+                        'idProducto' => $fila["idProducto"],
+                        'nombre' => $fila["nombre"],
+                        'codigo' => $fila["codigo"]
+                    );
+
+                }
+                $json_string = json_encode($json);
+                echo $json_string;
+            } else {
+                echo 'no hay registros';
+            }
+
+        
+        }
+    }
+
+}
+
+if(isset($_GET)){
+    if(isset($_GET["quest"])){
+        if($_GET["quest"] == 'obtener_correlativo'){
+            $mysql_query ="SELECT MAX(correlativo)+1 as correlativo FROM pedidounhesa";
+            $resultado = mysqli_query($con, $mysql_query);
+
+            if(!$resultado){
+                die('el Query falló:' . mysqli_error($con));
+            }
+
+            if(mysqli_num_rows($resultado)>0){
+                $json = array();
+                while($fila = mysqli_fetch_array($resultado)){
+                    $json[] = array(
+                        'correlativo' => $fila["correlativo"]
+                    );
+
+                }
+                $json_string = json_encode($json);
+                echo $json_string;
+            } else {
+                echo 'no hay registros';
+            }
+
+        
+        }
+    }
+
+}
+
+if(isset($_GET)){
+    if(isset($_GET["quest"])){
+        if($_GET["quest"] == 'obtener_idPedido'){
+            $mysql_query ="SELECT idPedidoUnhesa as id FROM pedidounhesa ORDER BY idPedidoUnhesa DESC LIMIT 1";
+            $resultado = mysqli_query($con, $mysql_query);
+
+            if(!$resultado){
+                die('el Query falló:' . mysqli_error($con));
+            }
+
+            if(mysqli_num_rows($resultado)>0){
+                $json = array();
+                while($fila = mysqli_fetch_array($resultado)){
+                    $json[] = array(
+                        'id' => $fila["id"]
+                    );
+
+                }
+                $json_string = json_encode($json);
+                echo $json_string;
+            } else {
+                echo 'no hay registros';
+            }
+
+        
+        }
+    }
+
+}
+
+if(isset($_POST)){
+    if(isset($_POST['quest'])){
+        if($_POST['quest'] == 'agregar_pedido_frioso'){
+            $mysql_query = "INSERT INTO pedidounhesa (correlativo, fecha_emision, fecha_despacho, direccion, observacion, telefono, hora, observacion_A, total, idVendedor, idtipoentrega, idCliente, idEstado)
+            values (".$_POST['correlativo'].",'NOW()','".$_POST['fecha_despacho']."','".$_POST['direccion']."','".$_POST['observacion']."',".$_POST['telefono'].",'".$_POST['hora']."','".$_POST['observacion_A']."',".$_POST['total'].",".$_POST['idVendedor'].",".$_POST['idTipoEntrega'].",".$_POST['idCliente'].",1)";
+
+            $result = mysqli_query($con, $mysql_query);
+
+            if (!$result) {
+                die('Query Falló ' . mysqli_error($con));
+            }else{
+                echo 'Success';
+            }
+        }
+    }
+}
+
+if(isset($_POST)){
+    if(isset($_POST['quest'])){
+        if($_POST['quest'] == 'registrar_detallePedidos'){
+            $mysql_query = "INSERT INTO detallepedidounhesa (cantidad, precio, total,observaciones,  idPedidoUnhesa, idProducto) 
+            VALUES ".$_POST['registro1'].",".$_POST['registro2'].",".$_POST['registro3'].",".$_POST['registro4'].",".$_POST['registro5'].",".$_POST['registro6'].",".$_POST['registro7'].",".$_POST['registro8'].",".$_POST['registro9'].
+            ",".$_POST['registro10'].",".$_POST['registro11'].",".$_POST['registro12'].",".$_POST['registro13'].",".$_POST['registro14'].",".$_POST['registro15'].",".$_POST['registro16'].",".$_POST['registro17'].",".$_POST['registro18'].",".$_POST['registro19'].","
+            .$_POST['registro20'].",".$_POST['registro21'].",".$_POST['registro22'].",".$_POST['registro23'].",".$_POST['registro24'].",".$_POST['registro25'].",".$_POST['registro26'].",".$_POST['registro27'].",".$_POST['registro28'].",".$_POST['registro29'];
+            $result = mysqli_query($con, $mysql_query);
+
+            if (!$result) {
+                die('Query Falló ' . mysqli_error($con));
+            }else{
+                echo 'Success';
+            }
+        }
+    }
+}
+
+if($_SERVER['REQUEST_METHOD'] == "DELETE"){
+    
+    parse_str(file_get_contents("php://input"), $_DELETE);
+    if($_DELETE["quest"]=='eliminar_registros_vacios'){
+    $mysql_query = "DELETE FROM detallepedidounhesa WHERE cantidad = 0.00
+    ORDER BY idDetallePedidoUnhesa DESC LIMIT 29";
+    
+    $resultado = mysqli_query($con, $mysql_query);
+
+    if(!$resultado){
+        echo  mysqli_error($con);
+    }else{
+        echo 'Success';
+    }
+}
 }
