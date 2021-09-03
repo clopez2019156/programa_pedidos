@@ -43,7 +43,6 @@ $(document).ready(function() {
 });
 
 function seleccion() {
-    4
     var opcion = document.getElementById('opcion').value;
     // alert(opcion);
     if (opcion == 0) {
@@ -55,5 +54,17 @@ function seleccion() {
     } else {
         sessionStorage.setItem('opcion_online', opcion);
         window.location.href = './pedido_online.html';
+    }
+}
+
+function verifica_codigo(pform) {
+    if (pform.idCliente.value == "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Cliente Inválido',
+            text: 'Porfavor seleccione un cliente válido'
+        });
+        return false;
+        pform.idCliente.focus();
     }
 }

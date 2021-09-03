@@ -6,22 +6,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <title>Pedidos</title>
-    <link href="css/styles.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
-    <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js" crossorigin="anonymous"></script>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 
 </head>
 
@@ -46,7 +44,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Inicia Menu lateral  -->
-            <li class="nav-item">
+            <li class="nav-item ">
                 <a class="nav-link" href="../index.php">
                     <i class="fas fa-home"></i>
                     <span>Inicio</span></a>
@@ -64,27 +62,33 @@
 
             <!-- Nav Item - Pedidos -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#OpcionesPedidos" aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#OpcionesPedidos"
+                    aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-money-check-alt"></i>
                     <span>Pedidos</span>
                 </a>
 
-                <div id="OpcionesPedidos" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                <div id="OpcionesPedidos" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Opciones:</h6>
-                        <a class="collapse-item" href="/programa_pedidos/Pedidos/Pedido_busqueda.php"> <i class="fas fa-stream"></i>&nbsp Buscar</a>
-                        <a class="collapse-item" href="/programa_pedidos/Pedidos/AddCliente.php"> <i class="fas fa-plus"></i>&nbsp Agregar</a>
+                        <a class="collapse-item" href="/programa_pedidos/Pedidos/Pedido_busqueda.php"> <i
+                                class="fas fa-stream"></i>&nbsp Buscar</a>
+                        <a class="collapse-item" href="/programa_pedidos/Pedidos/AddCliente.php"> <i
+                                class="fas fa-plus"></i>&nbsp Agregar</a>
                     </div>
                 </div>
             </li>
             <!-- Nav Item - Recibos -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#OpcionesRecibos" aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#OpcionesRecibos"
+                    aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-money-check-alt"></i>
                     <span>Recibos</span>
                 </a>
 
-                <div id="OpcionesRecibos" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                <div id="OpcionesRecibos" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Opciones:</h6>
                         <a class="collapse-item" href="../inventarios_php/ver_lista_recibos.html"><i
@@ -123,13 +127,15 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <p id="nombre_del_usuario"></p>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
                                 <img class="img-profile rounded-circle" src="../img/Econsa.png">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
                                 <a onclick="logout()" class="dropdown-item">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Logout
                                 </a>
@@ -138,69 +144,350 @@
                     </ul>
 
                 </nav>
-                <div class="container text-center">
-                    <h1>Ingrese Pedido</h1>
+                <div class="contenido m-5">
                     <br>
-                    <br>
-                    <h5>Nombre del Cliente</h5>
-                    <input type="text" class="form-control" placeholder="Nombre">
-                    <br>
-                    <h5>Dirección</h5>
-                    <input type="text" class="form-control" placeholder="Dirección">
-                    <br>
-                    <h5>Télefono</h5>
-                    <input type="text" class="form-control" placeholder="Teléfono">
-                    <br>
-                    <h5>Nombre de Factura</h5>
-                    <input type="text" class="form-control" placeholder="Nombre de factura">
-                    <br>
+                    <div>
+                        <h1 id="bienvenida">Pedido Online</h1>
+                        <br>
+                        <h5>Nombre del cliente</h5>
+                        <form>
+                            <input type="text" class="form-group" list="browsers" name="browser" id="browser" style="width: 100%;">
+                            <datalist id="browsers"></datalist>
+                          </form>
+                        <br>
+                        <h5>Dirección</h5>  
+                        <input type="text" class="form-control" placeholder="Dirección" id="direccion">
+                        <br>
+                        <h5>Télefono</h5>
+                        <input type="number" class="form-control" placeholder="Teléfono" id="telefono">
+                        <br>
+                        <h5>Nombre de Factura</h5>
+                        <input type="text" class="form-control" placeholder="Nombre de factura" id="nombre_factura">
+                        <br>
+                        <h5>NIT</h5>
+                        <input type="text" class="form-control" placeholder="NIT" id="nit">
+                        <br>
+                        <h5>Stickers</h5>
+                        <input type="text" class="form-control" placeholder="Stickers" id="sticker">
+                        <br>
+                        <h5>Servicio</h5>
+                        <select class="custom-select" id="servicio">
+                            <option selected value="0">Elija un servicio</option>
+                            <option value="1">Servicio Estándar</option>
+                            <option value="2">Servicio de Cobro</option>
+                            <option value="3">Same day</option>
+                        </select>
+                        <br>
+                        <br>
+                        <h5>Observaciones</h5>
+                        <input type="text" class="form-control" placeholder="Observaciones" id="observacion">
+                        <br>
+                        <h5>Fecha de entrega</h5>
+                        <input type="datetime-local" class="form-control" placeholder="Fecha Entrega"
+                            id="fecha_entrega">
+                        <br>
+                        <form>
+                            <div class="p-3">
+                                <label>Codigo del Cliente:</label>
+                                <br>
+                                <select class="idCliente browser-default custom-select" id="idCliente"></select>
+                            </div>
+                            <script type="text/javascript">
+                                $('.idCliente').select2({
+                                    placeholder: 'Codigo del cliente',
+                                    ajax: {
+                                        url: 'ajax.php',
+                                        dataType: 'json',
+                                        delay: 250,
+                                        processResults: function (data) {
+                                            return {
+                                                results: data
+                                            };
+                                        },
+                                        cache: true
+                                    }
+                                });
+                            </script>
+                        </form>
+                        <br>
+                        <br>
+                        <br>
+                        <table class="table bg-white" style="color: black; ">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Código del Producto</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PTPPFR041-Fri-Oso Fardo 15 Unidades (10 barras Surtidas)</td>
+                                    <td><input type="number" class="form-control" id="precio1" value="105"></td>
+                                    <td><input type="number" class="form-control" id="cantidad1"></td>
+                                </tr>
+                                <tr>
+                                    <td>PTPPGE041-GELOSO SABOR ARTIFICIAL A NARANJA FORTIFICADO CON VITAMINA C</td>
+                                    <td><input type="number" class="form-control" id="precio2" value="230"></td>
+                                    <td><input type="number" class="form-control" id="cantidad2"></td>
+                                </tr>
+                                <tr>
+                                    <td>PTPPGE039-GEL-OSO Znc+C+D Fardo 270 Barras.</td>
+                                    <td><input type="number" class="form-control" id="precio3" value="350"></td>
+                                    <td><input type="number" class="form-control" id="cantidad3"></td>
+                                </tr>
+                                <tr>
+                                    <td>PTPPHX001-Hidroxon Fardo Uva 50 Uni.</td>
+                                    <td><input type="number" class="form-control" id="precio4" value="80"></td>
+                                    <td><input type="number" class="form-control" id="cantidad4"></td>
+                                </tr>
+                                <tr>
+                                    <td>PTPPHX002-Hidroxon Fardo Fresa 50 Uni</td>
+                                    <td><input type="number" class="form-control" id="precio5" value="80"></td>
+                                    <td><input type="number" class="form-control" id="cantidad5"></td>
+                                </tr>
+                                <tr>
+                                    <td>PTPPHX003-Hidroxon Fardo Naranja 50 Uni.</td>
+                                    <td><input type="number" class="form-control" id="precio6" value="80"></td>
+                                    <td><input type="number" class="form-control" id="cantidad6"></td>
+                                </tr>
+                                <tr>
+                                    <td>PTPPHX004-Hidroxon Fardo Piña 50 Uni.</td>
+                                    <td><input type="number" class="form-control" id="precio7" value="80"></td>
+                                    <td><inpu.-t type="number" class="form-control" id="cantidad7"></td>
+                                </tr>
+                                <tr>
+                                    <td>PTPPDBPQ002-Del Bueno Panqueques 24*450gr.</td>
+                                    <td><input type="number" class="form-control" id="precio8" value="288"></td>
+                                    <td><input type="number" class="form-control" id="cantidad8"></td>
+                                </tr>
+                                <tr>
+                                    <td>PTPPGE040-GEL-OSO Znc+C+D Fardo 400 Barras.</td>
+                                    <td><input type="number" class="form-control" id="precio9" value="300"></td>
+                                    <td><input type="number" class="form-control" id="cantidad9"></td>
+                                </tr>
+                                <tr>
+                                    <td>PTPPGE037-VITAMINA C GEL-OSO 500 MG. 400 Barras.</td>
+                                    <td><input type="number" class="form-control" id="precio10" value="200"></td>
+                                    <td><input type="number" class="form-control" id="cantidad10"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <form>
+                                            <div class="p-3">
+                                                <select class="idProducto1 browser-default custom-select"
+                                                    id="idProducto1"></select>
+                                            </div>
+                                            <script type="text/javascript">
+                                                $('.idProducto1').select2({
+                                                    placeholder: 'Codigo del Producto',
+                                                    ajax: {
+                                                        url: './bd/codigo_producto.php',
+                                                        dataType: 'json',
+                                                        delay: 250,
+                                                        processResults: function (data) {
+                                                            return {
+                                                                results: data
+                                                            };
+                                                        },
+                                                        cache: true
+                                                    }
+                                                });
+                                            </script>
+                                        </form>
+                                    </td>
+                                    <td><input type="number" class="form-control" id="precio11"></td>
+                                    <td><input type="number" class="form-control" id="cantidad11"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <form>
+                                            <div class="p-3">
+                                                <select class="idProducto2 browser-default custom-select"
+                                                    id="idProducto2"></select>
+                                            </div>
+                                            <script type="text/javascript">
+                                                $('.idProducto2').select2({
+                                                    placeholder: 'Codigo del Producto',
+                                                    ajax: {
+                                                        url: './bd/codigo_producto.php',
+                                                        dataType: 'json',
+                                                        delay: 250,
+                                                        processResults: function (data) {
+                                                            return {
+                                                                results: data
+                                                            };
+                                                        },
+                                                        cache: true
+                                                    }
+                                                });
+                                            </script>
+                                        </form>
+                                    </td>
+                                    <td><input type="number" class="form-control" id="precio12"></td>
+                                    <td><input type="number" class="form-control" id="cantidad12"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <form>
+                                            <div class="p-3">
+                                                <select class="idProducto3 browser-default custom-select"
+                                                    id="idProducto3"></select>
+                                            </div>
+                                            <script type="text/javascript">
+                                                $('.idProducto3').select2({
+                                                    placeholder: 'Codigo del Producto',
+                                                    ajax: {
+                                                        url: './bd/codigo_producto.php',
+                                                        dataType: 'json',
+                                                        delay: 250,
+                                                        processResults: function (data) {
+                                                            return {
+                                                                results: data
+                                                            };
+                                                        },
+                                                        cache: true
+                                                    }
+                                                });
+                                            </script>
+                                        </form>
+                                    </td>
+                                    <td><input type="number" class="form-control" id="precio13"></td>
+                                    <td><input type="number" class="form-control" id="cantidad13"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <form>
+                                            <div class="p-3">
+                                                <select class="idProducto4 browser-default custom-select"
+                                                    id="idProducto4"></select>
+                                            </div>
+                                            <script type="text/javascript">
+                                                $('.idProducto4').select2({
+                                                    placeholder: 'Codigo del Producto',
+                                                    ajax: {
+                                                        url: './bd/codigo_producto.php',
+                                                        dataType: 'json',
+                                                        delay: 250,
+                                                        processResults: function (data) {
+                                                            return {
+                                                                results: data
+                                                            };3
+                                                        },
+                                                        cache: true
+                                                    }
+                                                });
+                                            </script>
+                                        </form>
+                                    </td>
+                                    <td><input type="number" class="form-control" id="precio14"></td>
+                                    <td><input type="number" class="form-control" id="cantidad14"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <form>
+                                            <div class="p-3">
+                                                <select class="idProducto5 browser-default custom-select"
+                                                    id="idProducto5"></select>
+                                            </div>
+                                            <script type="text/javascript">
+                                                $('.idProducto5').select2({
+                                                    placeholder: 'Codigo del Producto',
+                                                    ajax: {
+                                                        url: './bd/codigo_producto.php',
+                                                        dataType: 'json',
+                                                        delay: 250,
+                                                        processResults: function (data) {
+                                                            return {
+                                                                results: data
+                                                            };
+                                                        },
+                                                        cache: true
+                                                    }
+                                                });
+                                            </script>
+                                        </form>
+                                    </td>
+                                    <td><input type="number" class="form-control" id="precio15"></td>
+                                    <td><input type="number" class="form-control" id="cantidad15"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="btn btn-primary btn-block" id="button" onclick="guardar()">Guardar</button>
+                        <br>
+                        <!-- <button onclick="secondary();" class="btn btn-secondary btn-block" id="button">Habilitar Reconteos</button> -->
+                    </div>
 
-
+                    <!-- Custom fonts for this template-->
+                    <style>
+                        .contenido {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: black;
+                            text-align: center;
+                        }
+                    </style>
                 </div>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
             </div>
-            <footer class="sticky-footer bg-white ">
-                <div class="container my-auto ">
-                    <div class="copyright text-center my-auto ">
+            <!-- End of Main Content -->
+
+            <!-- AQUI -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
                         <span>Departamento de Informática 2021</span>
                     </div>
                 </div>
             </footer>
+            <!-- End of Footer -->
+
         </div>
     </div>
-    <div class="modal fade " id="logoutModal " tabindex="-1 " role="dialog " aria-labelledby="exampleModalLabel " aria-hidden="true ">
-        <div class="modal-dialog " role="document ">
-            <div class="modal-content ">
-                <div class="modal-header ">
-                    <h5 class="modal-title " id="exampleModalLabel ">Ready to Leave?</h5>
-                    <button class="close " type="button " data-dismiss="modal " aria-label="Close ">
-                        <span aria-hidden="true ">×</span>
+    <!-- End of Sidebar -->
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body ">Select "Logout " below if you are ready to end your current session.</div>
-                <div class="modal-footer ">
-                    <button class="btn btn-secondary " type="button " data-dismiss="modal ">Cancel</button>
-                    <a class="btn btn-primary " href="../login.html ">Logout</a>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- SWEET ALERT -->
+    <!-- <script src="./node_modules/sweetalert2/dist/sweetalert2.all.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js "></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js "></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js "></script>
+    <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js "></script>
-    <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js "></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11 "></script>
-    <script src="./js/agregar_pedido_online.js "></script>
-
+    <script src="./js/pedido_online.js"></script>
 </body>
 
 </html>
