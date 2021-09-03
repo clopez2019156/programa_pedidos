@@ -19,7 +19,7 @@ if (!$conn) {
     }
 }
 // ---------------- MYSQL -------------------- //
-$con = mysqli_connect("localhost", "root", "");
+$con = mysqli_connect("192.168.0.83", "admin", "");
 if (!$con) {
     die('Could not connect: ' . mysqli_connect_error());
 }
@@ -37,7 +37,7 @@ if (isset($_GET)) {
             if (!$result) {
                 die('Query Falló ' . odbc_error($conn));
             }
-
+            
             if (odbc_num_rows($result) > 0) {
                 $json = array();
                 while ($row = odbc_fetch_array($result)) {
@@ -365,6 +365,31 @@ if (isset($_GET)) {
                 echo 'Imagen no existe...';
             }
         }
+
+        // OBTENER CLIENTES ONLINE
+        if ($_GET["quest"] == 'ver_clientes_online') {
+            session_start();
+            $mysqli = "SELECT * FROM clientes_online";
+            // echo $mysqli;
+            $result = mysqli_query($con, $mysqli);
+
+            if (!$result) {
+                die('Query Falló ' . mysqli_error($con));
+            }
+
+            if (mysqli_num_rows($result) > 0) {
+                $json = array();
+                while ($row = mysqli_fetch_array($result)) {
+                    $json[] = array(
+                        'nombre' => $row["nombre"]
+                    );
+                }
+                $json_string = json_encode($json);
+                echo $json_string;
+            } else {
+                echo 'No';
+            }
+        }
     }
 }
 // ------------------------------ * POST * ---------------------------------- //
@@ -537,6 +562,22 @@ if (isset($_POST)) {
             }
         }
     }
+
+    if (isset($_POST["quest"])) {
+
+        // ACTUALIZAR ESTADO DEL RECIBO
+        if ($_POST["quest"] == 'insertar_pedido_online') {
+            $sql = "INSERT INTO `pedido_online`( `nombre`, `direccion`, `telefono`, `nombre_factura`, `nit`, `stickers`, `servicio`, `observaciones`, `fecha_entrega`, `id_cliente_online` ) VALUES('".$_POST["nombre"]."', '".$_POST["direccion"]."', ".$_POST["telefono"].", '".$_POST["nombre_factura"]."', '".$_POST["nit"]."', '".$_POST["stickers"]."', '".$_POST["servicio"]."', '".$_POST["observaciones"]."', '".$_POST["fecha_entrega"]."', ".$_POST["id_cliente_online"].")";
+            // echo $sql;
+            $result = mysqli_query($con, $sql);
+
+            if (!$result) {
+                die('Query Falló ' . mysqli_error($con));
+            }else{
+                echo 'Successfully';
+            }
+        }
+    }
 }
 function updateConteos()
 {
@@ -560,4 +601,38 @@ function updateConteos()
         die('Could not connect: ' . mysqli_connect_error());
     }
     mysqli_select_db($con, "dbinventarios");
+}
+
+
+//---------------Plantilla friosos consultas
+if(isset($_GET)){
+    if(isset($_GET["quest"])){
+        if($_GET["quest"] == 'listar_productos'){
+            $mysql_query ="SELECT * FROM producto";
+            $resultado = mysqli_query($con, $mysql_query);
+
+            if(!$resultado){
+                die('el Query falló:' . mysqli_error($con));
+            }
+
+            if(mysqli_num_rows($resultado)>0){
+                $json = array();
+                while($fila = mysqli_fetch_array($resultado)){
+                    $json[] = array(
+                        'idProducto' => $fila["idProducto"],
+                        'nombre' => $fila["nombre"],
+                        'codigo' => $fila["codigo"]
+                    );
+
+                }
+                $json_string = json_encode($json);
+                echo $json_string;
+            } else {
+                echo 'no hay registros';
+            }
+
+        
+        }
+    }
+
 }
