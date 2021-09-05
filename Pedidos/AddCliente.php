@@ -33,31 +33,27 @@ include("../includes/header.php");
                             <br>
                             <select class="idCliente browser-default custom-select" name="idCliente"></select>
                         </div>
-                        <script type="text/javascript">
-                            $('.idCliente').select2({
-                                placeholder: 'Codigo del cliente',
-                                ajax: {
-                                    url: 'ajax.php',
-                                    dataType: 'json',
-                                    delay: 250,
-                                    processResults: function(data) {
-                                        return {
-                                            results: data
-                                        };
-                                    },
-                                    cache: true
-                                }
-                            });
-                        </script>
-
+                            <script type="text/javascript">
+                                $('.idCliente').select2({
+                                    placeholder: 'Codigo del cliente',
+                                    ajax: {
+                                        url: 'ajax.php',
+                                        dataType: 'json',
+                                        delay: 250,
+                                        processResults: function(data) {
+                                            return {
+                                                results: data
+                                            };
+                                        },
+                                        cache: true
+                                    }
+                                });
+                            </script>
                         <input type="submit" class="btn btn-primary" value="Seleccionar Cliente">
                         <br>
                         <br>
                     </form>
                 </div>
-
-
-                </form>
             </div>
         </div>
     </div>

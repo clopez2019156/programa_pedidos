@@ -123,7 +123,6 @@ while ($fila = mysqli_fetch_array($resultadoUsuario)) {
                 <label>Observaciones:</label>
                 <input type="text" class="form-control form-control-user" id="observaciones" name="observaciones" value="<?= $observacion; ?>" disabled>
                 <br>
-
                 <hr>
                 <h2 class="h6 text-gray-700 mb-4" align="left">Detalle del pedido:</h2>
               </div>
