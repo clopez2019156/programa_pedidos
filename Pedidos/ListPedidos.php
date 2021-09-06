@@ -139,7 +139,7 @@ include("../includes/header.php");
   }
 </script>
 <!-- Repetir pedido -->
-<form name='fview2' method='post' action='zvista_gabriel.php'>
+<form name='fview2' method='post' action='pedido_repeat.php'>
   <input type="hidden" name="idPedido2">
 </form>
 

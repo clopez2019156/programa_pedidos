@@ -90,7 +90,7 @@ while ($fila = mysqli_fetch_array($resultadoUsuario)) {
                 <div class="p-5">
                     </div>
                     <form name="datos">
-                        <div class="container">
+                        <div>
                             <label>Codigo y Nombre del Cliente:</label>
                             <br>
                             <select class="idCliente browser-default custom-select" name="idCliente" id="idCliente" required>
@@ -151,44 +151,42 @@ while ($fila = mysqli_fetch_array($resultadoUsuario)) {
                 <input type="text" class="form-control form-control-user" id="observacionesA" name="observacionesA" value="<?= $observacion; ?>" >
                 <br>
                 <hr>
-                <div class="row">
-                  <div class="col 1">
+                
                   <h2 class="h6 text-gray-700 mb-4" align="left">Detalles del pedido:</h2>
-                  </div>
-                </div>
+                  
                 <br><br>
                 <label>Agregar un detalle nuevo al pedido predeterminado:</label>
-                                <br>
-                                <br>
-                                <select class="idProducto browser-default custom-select" id="idProducto" name="idProducto"></select>                                
-                                <script type="text/javascript">
-                                    $('.idProducto').select2({
-                                        placeholder: 'Codigo del Producto',
-                                        ajax: {
-                                            url: 'productos.php',
-                                            dataType: 'json',
-                                            delay: 250,
-                                            processResults: function(data) {
-                                                return {
-                                                    results: data
-                                                };
-                                            },
-                                            cache: true
-                                        }
-                                    });
-                                </script>
-                                <br>
-                                <br>
-                                <label>Cantidad:</label>
-                                <input type="number" id="cantidad" min="0" value=1 class="form-control form-control-user" name="cantidad" placeholder="cantidad" required>
-                                <br>
-                                <label>Precio:</label>
-                                <input type="number" id="precio" min="0" value=1 class="form-control form-control-user" name="precio" placeholder="cantidad" required>
-                                <br>
-                                <input type="text" class="form-control form-control-user" id="observaciones" name="observaciones" placeholder="Observaciones">
-                                <br>
-                                <button class="btn btn-warning" type="button" onclick="guardarElemento()">Ingresar Detalle</button>
-                            </div>
+                          <br>
+                          <br>
+                          <select class="idProducto browser-default custom-select" id="idProducto" name="idProducto"></select>                                
+                          <script type="text/javascript">
+                              $('.idProducto').select2({
+                                  placeholder: 'Codigo del Producto',
+                                  ajax: {
+                                      url: 'productos.php',
+                                      dataType: 'json',
+                                      delay: 250,
+                                      processResults: function(data) {
+                                          return {
+                                              results: data
+                                          };
+                                      },
+                                      cache: true
+                                  }
+                              });
+                          </script>
+                          <br>
+                          <br>
+                          <label>Cantidad:</label>
+                          <input type="number" id="cantidad" min="0" value=1 class="form-control form-control-user" name="cantidad" placeholder="cantidad" required>
+                          <br>
+                          <label>Precio:</label>
+                          <input type="number" id="precio" min="0" value=1 class="form-control form-control-user" name="precio" placeholder="cantidad" required>
+                          <br>
+                          <input type="text" class="form-control form-control-user" id="observaciones" name="observaciones" placeholder="Observaciones">
+                          <br>
+                          <button class="btn btn-warning" type="button" onclick="guardarElemento()">Ingresar Detalle</button>
+                      </div>
                     </div>
                     <div class="p-5" style="overflow-x:auto;">
                         <table class="table table-striped table-bordered nowrap" id="dataTable1" width="100%" align="center" cellspacing="0" data-role="datatable" data-info="false">
