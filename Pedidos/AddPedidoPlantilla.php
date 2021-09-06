@@ -98,9 +98,8 @@ $id = $_SESSION["idUsuario"];
 
                                     <div>
                                     <div class="p-5" style="overflow-x:auto;">
-                                </div>
-                                <div>
-                                    <table class="table table-striped table-bordered nowrap" id="dataTable" width="100%" align="center" cellspacing="0" data-role="datatable" data-info="false">
+                                    <br>
+                                    <table class="table table-striped table-bordered nowrap" class="display"  id="dataTable" width="100%" align="center" cellspacing="0" data-role="datatable" data-info="false">
                                         <tbody>
                                             <thead>
                                             <tr>
@@ -474,6 +473,9 @@ $id = $_SESSION["idUsuario"];
                                         
                                     </table>
                                     <br>
+                                </div>
+                                <div>
+                                    
                                     <table class="table table-striped table-bordered nowrap" id="dataTable" width="100%" align="center" cellspacing="0" data-role="datatable" data-info="false">
                                         <thead>
                                             <tr>
@@ -490,7 +492,8 @@ $id = $_SESSION["idUsuario"];
                                     </table>
 
                                     <br>
-                                    <button type="button" class="btn btn-success" style="margin-right: 30px" onclick="calcularTotales()">Calcular Total</button>
+                                    <button type="button" class="btn btn-success" onclick="calcularTotales()">Calcular Total</button>
+                                    <br><br>
                                     <button id="enviar" type="button" class="btn btn-primary" onclick="agregarPedido()" disabled>Enviar Pedido</button>
                                     
                                 </div>
