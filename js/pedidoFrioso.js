@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    $('#dataTable').DataTable();
     correlativo();
    
 });
@@ -577,6 +576,7 @@ function agregarPedido() {
                     'agregado con éxito',
                     'El pedido ha sido ingresado con éxito',
                     'success')
+                    
                 agregarDetallePedido(Pr);
 
             } else {
@@ -692,7 +692,7 @@ function agregarDetallePedido(idP) {
             if (res == 'Success') {
 
                 borrarPedidoVacio();
-                location.reload();
+                
 
             } else {
                 Swal.fire(
@@ -716,6 +716,7 @@ function borrarPedidoVacio() {
         success: function(res) {
             console.log(res);
             sessionStorage.clear();
+            window.location="./Pedido_busqueda.php";
         }
     })
 }
