@@ -1,5 +1,7 @@
 $(document).ready(function() {
+    $('#dataTable').DataTable();
     correlativo();
+   
 });
 
 function setearDatos1() {
